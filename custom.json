@@ -13,7 +13,7 @@
         },
         "children": ["marietta", "5points"]
     },
-    "marietta": ["host6.example.com"],
+    "marietta": ["host6.example.com", "host7.example.com"],
     "_meta": {
                 "hostvars": {}
                 
