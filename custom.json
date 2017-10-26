@@ -5,7 +5,16 @@
 		     "managed_name": [{"cluster_name": "XPIDemoCluster", "num_servers": "2", "name": "server1", "ports": "20300,20700"}]
 		}
 	},
-	"_meta": {
+	"atlanta": {
+          "hosts": ["host1.example.com", "host4.example.com", "host5.example.com"],
+          "vars": {
+            "b": false
+        },
+        "children": ["marietta", "5points"]
+        },
+     "marietta": ["host6.example.com"],
+     "5points": ["host7.example.com"]
+      "_meta": {
                 "hostvars": {}
                 
                 }
