@@ -1,22 +1,40 @@
 {
-    "databases": {
-        "hosts": ["host1.example.com", "host2.example.com"],
-        "vars": {
-            "a": true
-        },
-        "children": ["marietta"]
-    },
-    "webservers": ["host2.example.com", "host3.example.com"],
-    "atlanta": {
-        "hosts": ["host1.example.com", "host4.example.com", "host5.example.com"],
-        "vars": {
-            "b": false
-        },
-        "children": ["marietta", "5points"]
-    },
-    "marietta": ["host6.example.com"],
-    "5points": ["host7.example.com"],
- "_meta": {
-        "hostvars": {}
-    }
+  "_meta": {
+    "hostvars": {}
+  },
+  "cr12346": {
+    "children": [
+      "cr12346_failedpatch",
+      "cr12346_rollback",
+      "cr12346_prepatched",
+      "cr12346_completed",
+      "cr12346_patched",
+      "cr12346_failedreboot",
+      "cr12346_failedprepatch",
+      "cr12346_failedrollback",
+      "cr12346_failedverify",
+      "cr12346_excluded",
+      "cr12346_completedrollback",
+      "cr12346_scheduled"
+    ],
+    "hosts": [],
+    "vars": {}
+  },
+  "cr12346_prepatched": {
+    "children": [],
+    "hosts": [
+      "uklvadtsp05.uk"
+    ],
+    "vars": {}
+  },
+  "cr12346_scheduled": {
+    "children": [],
+    "hosts": [
+      "uklvadtsp01.uk",
+      "uklvadtsp02.uk",
+      "uklvadtsp03.uk",
+      "uklvadtsp04.uk"
+    ], 
+    "vars": {}
+  }
 }
