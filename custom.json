@@ -1,40 +1,334 @@
 {
-  "_meta": {
-    "hostvars": {}
-  },
-  "cr12346": {
-    "children": [
-      "cr12346_failedpatch",
-      "cr12346_rollback",
-      "cr12346_prepatched",
-      "cr12346_completed",
-      "cr12346_patched",
-      "cr12346_failedreboot",
-      "cr12346_failedprepatch",
-      "cr12346_failedrollback",
-      "cr12346_failedverify",
-      "cr12346_excluded",
-      "cr12346_completedrollback",
-      "cr12346_scheduled"
-    ],
-    "hosts": [],
-    "vars": {}
-  },
-  "cr12346_prepatched": {
-    "children": [],
-    "hosts": [
-      "uklvadtsp05.uk"
-    ],
-    "vars": {}
-  },
-  "cr12346_scheduled": {
-    "children": [],
-    "hosts": [
-      "uklvadtsp01.uk",
-      "uklvadtsp02.uk",
-      "uklvadtsp03.uk",
-      "uklvadtsp04.uk"
-    ], 
-    "vars": {}
-  }
+	"": {},
+	"_meta": {
+		"hostvars": {
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7": {
+				"ansible_ssh_host": "10.65.199.143",
+				"openstack": {
+					"OS-DCF:diskConfig": "AUTO",
+					"OS-EXT-AZ:availability_zone": "nova",
+					"OS-EXT-SRV-ATTR:host": "overcloud-compute-0.localdomain",
+					"OS-EXT-SRV-ATTR:hypervisor_hostname": "overcloud-compute-0.localdomain",
+					"OS-EXT-SRV-ATTR:instance_name": "instance-0000001a",
+					"OS-EXT-STS:power_state": 1,
+					"OS-EXT-STS:task_state": null,
+					"OS-EXT-STS:vm_state": "active",
+					"OS-SRV-USG:launched_at": "2018-01-22T06:25:28.000000",
+					"OS-SRV-USG:terminated_at": null,
+					"accessIPv4": "10.65.199.143",
+					"accessIPv6": "",
+					"addresses": {
+						"External": [{
+							"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:c6:93:96",
+							"OS-EXT-IPS:type": "fixed",
+							"addr": "10.65.199.143",
+							"version": 4
+						}]
+					},
+					"adminPass": null,
+					"az": "nova",
+					"cloud": "devstack",
+					"config_drive": "",
+					"created": "2018-01-22T06:25:01Z",
+					"disk_config": "AUTO",
+					"flavor": {
+						"id": "1",
+						"name": "md1"
+					},
+					"has_config_drive": false,
+					"hostId": "f8483eed91b48238c7017e364bafd2aa6d76906ac8a5bdb4f81e038e",
+					"host_id": "f8483eed91b48238c7017e364bafd2aa6d76906ac8a5bdb4f81e038e",
+					"id": "9700a1fe-67c1-47c0-b75a-f87aec7b02c7",
+					"image": {
+						"id": ""
+					},
+					"interface_ip": "10.65.199.143",
+					"key_name": null,
+					"launched_at": "2018-01-22T06:25:28.000000",
+					"location": {
+						"cloud": "devstack",
+						"project": {
+							"domain_id": null,
+							"domain_name": null,
+							"id": "6e04b186a58c4f879505e4ecb4d6ff82",
+							"name": "test"
+						},
+						"region_name": "",
+						"zone": "nova"
+					},
+					"metadata": {},
+					"name": "test21",
+					"networks": {
+						"External": [
+							"10.65.199.143"
+						]
+					},
+					"os-extended-volumes:volumes_attached": [{
+						"id": "4a5274a5-485d-49a8-b761-45d156a39255"
+					}],
+					"power_state": 1,
+					"private_v4": "",
+					"progress": 0,
+					"project_id": "6e04b186a58c4f879505e4ecb4d6ff82",
+					"properties": {
+						"OS-DCF:diskConfig": "AUTO",
+						"OS-EXT-AZ:availability_zone": "nova",
+						"OS-EXT-SRV-ATTR:host": "overcloud-compute-0.localdomain",
+						"OS-EXT-SRV-ATTR:hypervisor_hostname": "overcloud-compute-0.localdomain",
+						"OS-EXT-SRV-ATTR:instance_name": "instance-0000001a",
+						"OS-EXT-STS:power_state": 1,
+						"OS-EXT-STS:task_state": null,
+						"OS-EXT-STS:vm_state": "active",
+						"OS-SRV-USG:launched_at": "2018-01-22T06:25:28.000000",
+						"OS-SRV-USG:terminated_at": null,
+						"os-extended-volumes:volumes_attached": [{
+							"id": "4a5274a5-485d-49a8-b761-45d156a39255"
+						}],
+						"request_ids": [],
+						"x_openstack_request_ids": []
+					},
+					"public_v4": "10.65.199.143",
+					"public_v6": "",
+					"region": "",
+					"request_ids": [],
+					"security_groups": [{
+						"description": "Default security group",
+						"id": "2ed49e6f-05f7-4ffc-b92c-09e357701e62",
+						"location": {
+							"cloud": "devstack",
+							"project": {
+								"domain_id": null,
+								"domain_name": null,
+								"id": "6e04b186a58c4f879505e4ecb4d6ff82",
+								"name": "test"
+							},
+							"region_name": "",
+							"zone": null
+						},
+						"name": "default",
+						"project_id": "6e04b186a58c4f879505e4ecb4d6ff82",
+						"properties": {},
+						"security_group_rules": [{
+								"direction": "ingress",
+								"ethertype": "IPv4",
+								"group": {
+									"name": "default",
+									"tenant_id": "6e04b186a58c4f879505e4ecb4d6ff82"
+								},
+								"id": "6253725f-af3e-4ca8-aedc-24cc789ce894",
+								"location": {
+									"cloud": "devstack",
+									"project": {
+										"domain_id": null,
+										"domain_name": null,
+										"id": "6e04b186a58c4f879505e4ecb4d6ff82",
+										"name": "test"
+									},
+									"region_name": "",
+									"zone": null
+								},
+								"port_range_max": null,
+								"port_range_min": null,
+								"project_id": "",
+								"properties": {
+									"group": {
+										"name": "default",
+										"tenant_id": "6e04b186a58c4f879505e4ecb4d6ff82"
+									}
+								},
+								"protocol": null,
+								"remote_group_id": null,
+								"remote_ip_prefix": null,
+								"security_group_id": "2ed49e6f-05f7-4ffc-b92c-09e357701e62",
+								"tenant_id": ""
+							},
+							{
+								"direction": "ingress",
+								"ethertype": "IPv4",
+								"group": {
+									"name": "default",
+									"tenant_id": "6e04b186a58c4f879505e4ecb4d6ff82"
+								},
+								"id": "fcc30ad8-acb3-4c62-942b-00b90832495c",
+								"location": {
+									"cloud": "devstack",
+									"project": {
+										"domain_id": null,
+										"domain_name": null,
+										"id": "6e04b186a58c4f879505e4ecb4d6ff82",
+										"name": "test"
+									},
+									"region_name": "",
+									"zone": null
+								},
+								"port_range_max": null,
+								"port_range_min": null,
+								"project_id": "",
+								"properties": {
+									"group": {
+										"name": "default",
+										"tenant_id": "6e04b186a58c4f879505e4ecb4d6ff82"
+									}
+								},
+								"protocol": null,
+								"remote_group_id": null,
+								"remote_ip_prefix": null,
+								"security_group_id": "2ed49e6f-05f7-4ffc-b92c-09e357701e62",
+								"tenant_id": ""
+							}
+						],
+						"tenant_id": "6e04b186a58c4f879505e4ecb4d6ff82"
+					}],
+					"status": "ACTIVE",
+					"task_state": null,
+					"tenant_id": "6e04b186a58c4f879505e4ecb4d6ff82",
+					"terminated_at": null,
+					"updated": "2018-01-22T06:25:27Z",
+					"user_id": "c3e3729da7c74118a126e5201a3aa895",
+					"vm_state": "active",
+					"volumes": [{
+						"attachments": [{
+							"attached_at": "2018-01-22T06:25:22.000000",
+							"attachment_id": "574b9a58-fc18-499c-88b7-aecf0e6e4c2e",
+							"device": "/dev/vda",
+							"host_name": null,
+							"id": "4a5274a5-485d-49a8-b761-45d156a39255",
+							"server_id": "9700a1fe-67c1-47c0-b75a-f87aec7b02c7",
+							"volume_id": "4a5274a5-485d-49a8-b761-45d156a39255"
+						}],
+						"availability_zone": "nova",
+						"bootable": true,
+						"can_multiattach": false,
+						"consistencygroup_id": null,
+						"created_at": "2018-01-22T06:25:07.000000",
+						"description": "",
+						"device": "/dev/vda",
+						"display_description": "",
+						"display_name": "",
+						"encrypted": false,
+						"host": "hostgroup@tripleo_ceph#tripleo_ceph",
+						"id": "4a5274a5-485d-49a8-b761-45d156a39255",
+						"is_bootable": true,
+						"is_encrypted": false,
+						"location": {
+							"cloud": "devstack",
+							"project": {
+								"domain_id": null,
+								"domain_name": null,
+								"id": "6e04b186a58c4f879505e4ecb4d6ff82",
+								"name": "test"
+							},
+							"region_name": "",
+							"zone": "nova"
+						},
+						"metadata": {
+							"attached_mode": "rw"
+						},
+						"migration_status": null,
+						"multiattach": false,
+						"name": "",
+						"os-vol-host-attr:host": "hostgroup@tripleo_ceph#tripleo_ceph",
+						"os-vol-mig-status-attr:migstat": null,
+						"os-vol-mig-status-attr:name_id": null,
+						"os-vol-tenant-attr:tenant_id": "6e04b186a58c4f879505e4ecb4d6ff82",
+						"properties": {
+							"os-vol-host-attr:host": "hostgroup@tripleo_ceph#tripleo_ceph",
+							"os-vol-mig-status-attr:migstat": null,
+							"os-vol-mig-status-attr:name_id": null,
+							"os-vol-tenant-attr:tenant_id": "6e04b186a58c4f879505e4ecb4d6ff82",
+							"source_volid": null,
+							"user_id": "c3e3729da7c74118a126e5201a3aa895",
+							"volume_image_metadata": {
+								"checksum": "ee1eca47dc88f4879d8a229cc70a07c6",
+								"container_format": "bare",
+								"disk_format": "qcow2",
+								"image_id": "c8b6c424-c324-4bca-bf34-61c8e0793e9a",
+								"image_name": "cirros",
+								"min_disk": "0",
+								"min_ram": "0",
+								"size": "13287936"
+							}
+						},
+						"replication_driver": null,
+						"replication_extended_status": null,
+						"replication_status": null,
+						"size": 1,
+						"snapshot_id": null,
+						"source_volid": null,
+						"source_volume_id": null,
+						"status": "in-use",
+						"updated_at": "2018-01-22T06:25:22.000000",
+						"user_id": "c3e3729da7c74118a126e5201a3aa895",
+						"volume_image_metadata": {
+							"checksum": "ee1eca47dc88f4879d8a229cc70a07c6",
+							"container_format": "bare",
+							"disk_format": "qcow2",
+							"image_id": "c8b6c424-c324-4bca-bf34-61c8e0793e9a",
+							"image_name": "cirros",
+							"min_disk": "0",
+							"min_ram": "0",
+							"size": "13287936"
+						},
+						"volume_type": null
+					}],
+					"x_openstack_request_ids": []
+				}
+			}
+		}
+	},
+	"_nova": {
+		"hosts": [
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7"
+		]
+	},
+	"all": {
+		"children": [
+			"",
+			"_nova",
+			"devstack",
+			"devstack_",
+			"devstack__nova",
+			"flavor-md1",
+			"instance-9700a1fe-67c1-47c0-b75a-f87aec7b02c7",
+			"nova",
+			"test21",
+			"ungrouped"
+		]
+	},
+	"devstack": {
+		"hosts": [
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7"
+		]
+	},
+	"devstack_": {
+		"hosts": [
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7"
+		]
+	},
+	"devstack__nova": {
+		"hosts": [
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7"
+		]
+	},
+	"flavor-md1": {
+		"hosts": [
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7"
+		]
+	},
+	"instance-9700a1fe-67c1-47c0-b75a-f87aec7b02c7": {
+		"hosts": [
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7"
+		]
+	},
+	"nova": {
+		"hosts": [
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7"
+		]
+	},
+	"test21": {
+		"hosts": [
+			"9700a1fe-67c1-47c0-b75a-f87aec7b02c7"
+		]
+	},
+	"ungrouped": {}
 }
