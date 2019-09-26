@@ -1,20 +1,33 @@
 {
-    "databases": {
-        "hosts": ["host1.example.com", "host2.example.com"],
-        "vars": {
-            "a": true
-        }
-    },
-    "webservers": ["host2.example.com", "host3.example.com"],
-    "atlanta": {
-        "hosts": ["host1.example.com", "host4.example.com", "host5.example.com"],
-        "vars": {
-            "b": false
-        },
-        "children": ["marietta", "5points"]
-    },
-    "marietta": ["host6.example.com"],
-    "_meta": {
+	"windows": {
+		"hosts": ["54.71.122.113", "54.71.14.167"],
+		"vars": {
+			"ansible_connection": "winrm",
+			"ansible_port": 5986,
+			"ansible_winrm_server_cert_validation": "ignore"
+		}
+	},
+	"cent": {
+		"hosts": ["54.70.19.232", "52.36.69.147"],
+		"vars": {
+			"ansible_user": "root",
+      "managed_name": "[{\"cluster_name\": \"XPIDemoCluster\", \"num_servers\": \"2\", \"name\": \"server1\", \"ports\": \"20300,20700\"}]"
+		}
+	},
+	"rhel": {
+		"hosts": ["52.36.252.43", "54.68.187.138"],
+		"vars": {
+			"ansible_user": "ec2-user"
+		}
+
+	},
+	"ubuntu": {
+		"hosts": ["52.89.117.209", "54.71.92.204"],
+		"vars": {
+			"ansible_user": "ubuntu"
+		}
+	},
+	"_meta": {
                 "hostvars": {}
                 
                 }
